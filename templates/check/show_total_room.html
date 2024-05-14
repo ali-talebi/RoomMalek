@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>اتاق ها خوابگاه</title>
+</head>
+<body>
+
+    <center><h1> تمامی اتاق های خوابگاه </h1></center>
+
+    {% for i in T_ROOMS %}
+        <a href="{% url 'home:detail' i.room.id %}"><li>{{ i.room.name }}</li></a>
+    {% endfor %}
+</body>
+</html>
